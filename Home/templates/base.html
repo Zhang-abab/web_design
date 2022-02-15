@@ -1,0 +1,29 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+<!DOCTYPE html>
+<!-- 网站主语言 -->
+<html lang="zh-cn">
+
+<head>
+    <!-- 网站采用的字符编码 -->
+    <meta charset="utf-8">
+    <!-- 预留网站标题的位置 -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- 引入bootstrap的css文件 -->
+</head>
+
+<body>
+    <!-- 引入导航栏 -->
+    {% include 'header.html' %}
+    <!-- 预留具体页面的位置 -->
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">{% block content %}{% endblock content %}</div>
+        <div class="col-1"></div>
+      </div>
+    <!-- 引入注脚 -->
+    {% include 'footer.html' %}
+</body>
+
+</html>
