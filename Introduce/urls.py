@@ -6,4 +6,5 @@ app_name = 'Introduce'
 
 urlpatterns = [
     path('editor/', views.editor, name='editor'), #编辑器测试
+    path('index/', views.index, name='index')
 ]

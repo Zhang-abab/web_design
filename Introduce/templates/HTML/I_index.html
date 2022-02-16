@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    Introduce
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block leftcontent %}
+<nav class="nav flex-column">
+    <a class="nav-link" href="{% url 'Introduce:editor' %}">编辑器测试</a>
+    <a class="nav-link" href="#">实体</a>
+    <a class="nav-link" href="#">mate标签</a>
+    <a class="nav-link" href="#">语义化标签</a>
+    <a class="nav-link" href="#">列表</a>
+    <a class="nav-link" href="#">超链接</a>
+    <a class="nav-link" href="#">图片标签</a>
+    <a class="nav-link" href="#">内联框架</a>
+    <a class="nav-link" href="#">音视频</a>
+</nav>
+{% endblock leftcontent %}
+{% block content %}
+{% endblock content %}
