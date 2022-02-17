@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>list</title>
+        <link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
+    </head>
+    <body>
+        <h3>5.列表</h3>
+        <p>列表</p>
+        <ol start=''>
+            <li>铅笔</li>
+            <li>尺子</li>
+            <li>橡皮</li>
+
+        </ol>
+        <p>在html中也可以创建列表，html列表一共有三种：</p>
+        <pre>
+
+            1. 有序列表
+            1. 无序列表
+            1. 定义列表
+        </pre>
+        <ul>
+            <li>
+                <p>无序列表（使用<mark>ol</mark>标签来创建无序列表）</p>
+                <ul>
+                    <li>使用<mark>li</mark>表示列表项</li>
+
+                </ul>
+            </li>
+            <li>
+                <p>有序列表（使用<mark>ul</mark>标签来创建有序列表）</p>
+                <ul>
+                    <li>使用<mark>li</mark>表示列表项</li>
+
+                </ul>
+            </li>
+            <li>
+                <p>定义列表（使用<mark>dl</mark>标签来创建一个定于列表）</p>
+                <ul>
+                    <li>使用<mark>dt</mark>来表示定义内容</li>
+                    <li>使用<mark>dd</mark>来对内容进行解释说明</li>
+
+                </ul>
+            </li>
+            <li>
+                <p>列表之间可以互相嵌套</p>
+            </li>
+
+        </ul>
+        <pre>
+            
+        &lt;!doctype html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;document&lt;/title&gt;
+            &lt;/head&gt;
+
+            &lt;body&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;结构&lt;/li&gt;
+                    &lt;li&gt;表现&lt;/li&gt;
+                    &lt;li&gt;行为&lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;ol&gt;
+                    &lt;li&gt;结构&lt;/li&gt;
+                    &lt;li&gt;表现&lt;/li&gt;
+                    &lt;li&gt;行为&lt;/li&gt;
+                &lt;/ol&gt;
+
+
+                &lt;dl&gt;
+                    &lt;dt&gt;结构&lt;/dt&gt;
+                    &lt;dd&gt;结构表示网页的结构，结构用来规定网页中哪里是标题，哪里是段落&lt;/dd&gt;
+                    &lt;dd&gt;结构表示网页的结构，结构用来规定网页中哪里是标题，哪里是段落&lt;/dd&gt;
+                    &lt;dd&gt;结构表示网页的结构，结构用来规定网页中哪里是标题，哪里是段落&lt;/dd&gt;
+                &lt;/dl&gt;
+
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        aa
+                        &lt;ul&gt;
+                            &lt;li&gt;aa-1&lt;/li&gt;
+                            &lt;li&gt;aa-2
+                                &lt;ul&gt;
+                                    &lt;li&gt;aa-1&lt;/li&gt;
+                                    &lt;li&gt;aa-2&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+
+            &lt;/body&gt;
+
+            &lt;/html&gt;
+        </pre>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multi</title>
+        <link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
+    </head>
+    <body>
+        <h3>9.音视频</h3>
+        <ul>
+            <li>
+                <p>
+                    <mark>audio</mark>
+                    标签用来向页面中引入一个外部的音频文件</p>
+                <ul>
+                    <li>
+                        <p>
+                            <mark>controls</mark>
+                            是否允许用户控制播放</p>
+                    </li>
+                    <li>
+                        <p>
+                            <mark>autoplay</mark>
+                            音频文件是否自动播放</p>
+                        <ul>
+                            <li>如果设置了<mark>autoplay</mark>则音乐在打开页面时会自动播放但是目前来讲大部分浏览器都不会自动对音乐进行播放</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <mark>loop</mark>
+                            音乐是否循环播放</p>
+                    </li>
+                    <li>
+                        <p>
+                            <mark>src</mark>
+                            指定外部文件路径，除了使用<mark>src</mark>来指定文件路径外，还可以使用<mark>source</mark>来指定文件路径。</p>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <p>
+                    <mark>video</mark>
+                    标签用来向页面中引入一个外部的视频文件</p>
+                <ul>
+                    <li>使用方法和<mark>audio</mark>标签基本一致</li>
+
+                </ul>
+            </li>
+
+        </ul>
+        <pre>
+            
+            &lt;!doctype html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+                &lt;title&gt;document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;audio controls&gt;
+                    &lt;source src=&quot;./source/audio.mp3&quot;&gt;
+                    &lt;source src=&quot;./source/audio.ogg&quot;&gt;
+                    &lt;embed src=&quot;./source/audio.mp3&quot; type=&quot;audio/mp3&quot; width=&quot;300&quot; height=&quot;100&quot;&gt;
+                &lt;/audio&gt;
+                &lt;video controls&gt;
+                    &lt;source src=&quot;./source/flower.webm&quot;&gt;
+                    &lt;source src=&quot;./source/flower.mp4&quot;&gt;
+                    &lt;embed src=&quot;./source/flower.mp4&quot; type=&quot;video/mp4&quot;&gt;
+                &lt;/video&gt;
+
+                &lt;iframe frameborder=&quot;0&quot; src=&quot;https://v.qq.com/txp/iframe/player.html?vid=b00318l66nt&quot; allowfullscreen=&quot;true&quot; width=&quot;500&quot; height=&quot;300&quot;&gt;&lt;/iframe&gt;
+
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+    </body>
+</html>

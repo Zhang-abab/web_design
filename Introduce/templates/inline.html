@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inline</title>
+        <link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
+    </head>
+    <body>
+        <h3>8.内联框架</h3>
+        <ul>
+            <li>
+                <p>内联框架，用于向当前页面引入一个其他页面</p>
+                <ul>
+                    <li>
+                        <mark>src</mark>
+                        指定要引入的网页的路径</li>
+                    <li>
+                        <mark>frameborder</mark>
+                        指定内联框架的边框</li>
+
+                </ul>
+            </li>
+
+        </ul>
+        <pre>
+            
+            &lt;!doctype html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+                &lt;title&gt;document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;iframe src=&quot;https://www.qq.com&quot; width=&quot;800&quot; height=&quot;600&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+                &lt;h1&gt;hello&lt;/h1&gt;
+
+                
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+    </body>
+</html>
