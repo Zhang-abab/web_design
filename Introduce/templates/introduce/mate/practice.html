@@ -1,0 +1,28 @@
+{% extends "introduce/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% block title %}Editor{% endblock %}
+{% block content %}
+<body>
+  <div class="card">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="/Introduce/mate">理论讲解</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/Introduce/mate/examples">效果展示</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/Introduce/mate/practice">代码练习</a>
+          </li>
+        </ul>
+      </div>
+      <div class="web-body">
+        <h3>暂无练习</h3>
+      </div>
+    </div>
+</body>  
+{% endblock content %}

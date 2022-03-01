@@ -1,0 +1,33 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load static %}
+{% bootstrap_javascript jquery='full' %}
+<!DOCTYPE html>
+<!-- 网站主语言 -->
+<html lang="zh-cn">
+
+<head>
+    <!-- 网站采用的字符编码 -->
+    <meta charset="utf-8">
+    <!-- 预留网站标题的位置 -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- 引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <br/>
+        <div class="row">
+            <div class="col-1">{% block leftcontent %}{% endblock leftcontent %}</div>
+            <div class="col-10">{% block content %}{% endblock content %}</div>
+            <div class="col-1">{% block rightcontent %}{% endblock rightcontent %}</div>
+          </div>
+      </div>
+      <div class="col align-self-end">
+        {% include 'footer.html' %}
+      </div>
+</body>
+
+</html>

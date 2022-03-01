@@ -1,0 +1,60 @@
+{% extends "introduce/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% block title %}Examples{% endblock %}
+{% block content %}
+    <body>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Introduce/list">理论讲解</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Introduce/list/examples">效果展示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Introduce/list/practice">代码练习</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="web-body">
+              <ul>
+                <li>结构</li>
+                <li>表现</li>
+                <li>行为</li>
+            </ul>
+
+            <ol>
+                <li>结构</li>
+                <li>表现</li>
+                <li>行为</li>
+            </ol>
+
+
+            <dl>
+                <dt>结构</dt>
+                <dd>结构表示网页的结构，结构用来规定网页中哪里是标题，哪里是段落</dd>
+                <dd>结构表示网页的结构，结构用来规定网页中哪里是标题，哪里是段落</dd>
+                <dd>结构表示网页的结构，结构用来规定网页中哪里是标题，哪里是段落</dd>
+            </dl>
+
+            <ul>
+                <li>
+                    aa
+                    <ul>
+                        <li>aa-1</li>
+                        <li>aa-2
+                            <ul>
+                                <li>aa-1</li>
+                                <li>aa-2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </body>
+{% endblock content %}

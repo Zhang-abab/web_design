@@ -1,0 +1,194 @@
+{% extends "introduce/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% block title %}Editor{% endblock %}
+{% block content %}
+    <body>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Introduce/semantic">理论讲解</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Introduce/semantic/examples">效果展示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Introduce/semantic/practice">代码练习</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h3>4.语义化标签</h3>
+                <p>在网页中HTML专门用来负责网页的结构所以在使用html标签时，应该关注的是标签的语义，而不是它的样式。</p>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>标题标签</strong>（h1～h6）</p>
+                        <ul>
+                            <li>h1～h6 一共六级标题</li>
+                            <li>从h1～h6重要性递减，h1最重要，h6不重要。</li>
+                            <li>h1在网页中的重要性仅次于title标签，一般情况下一个页面只会有一个h1</li>
+                            <li>标题标签都是块元素</li>
+                            <li>在页面独占一行的元素称为块元素（block element）</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>其他标签</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                <mark>hgrop</mark>标签用来为标题分组，可以将一组相关的标题同时放入到hgroup</li>
+                            <li>
+                                <mark>p</mark>标签表示页面中的一个段落</li>
+                            <li>
+                                <mark>em</mark>标签用于表示语调的一个加重</li>
+                            <li>
+                                <mark>strong</mark>标签表示强调，重要内容</li>
+                            <li>
+                                <mark>blockquote</mark>标签表示一个长引用</li>
+                            <li>
+                                <mark>q</mark>标签表示一个短应用</li>
+                            <li>
+                                <mark>br</mark>标签表示页面中的换行</li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <pre>
+
+            &lt;!doctype html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;一级标题&lt;/h1&gt;
+                &lt;h2&gt;二级标题&lt;/h2&gt;
+                &lt;h3&gt;三级标题&lt;/h3&gt;
+                &lt;h4&gt;四级标题&lt;/h4&gt;
+                &lt;h5&gt;五级标题&lt;/h5&gt;
+                &lt;h6&gt;六级标题&lt;/h6&gt;
+                &lt;hgroup&gt;
+                        &lt;h1&gt;回乡偶书二首&lt;/h1&gt;
+                        &lt;h2&gt;其一&lt;/h2&gt;
+                &lt;/hgroup&gt;
+                &lt;p&gt;在p标签中的内容就表示一个段落&lt;/p&gt;
+                &lt;p&gt;在p标签中的内容就表示一个段落&lt;/p&gt;
+                &lt;p&gt;今天天气&lt;em&gt;真&lt;/em&gt;不错！&lt;/p&gt;
+                &lt;p&gt;你今天必须要&lt;strong&gt;完成作业&lt;/strong&gt;！&lt;/p&gt;
+            
+                鲁迅说：
+                &lt;blockquote&gt;
+                    这句话我是从来没有说过的！
+                &lt;/blockquote&gt;
+                子曰&lt;q&gt;学而时习之，乐呵乐呵！&lt;/q&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                今天天气真不错    
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+                <ul>
+                    <li>
+                        <p>块元素（block element）：在网页中一般通过块元素来对页面进行布局</p>
+                    </li>
+                    <li>
+                        <p>行内元素（inline element）：行内元素主要用于包裹文字</p>
+                        <ul>
+                            <li>一般情况下在块元素中放行内元素，而不会在行内元素中放块元素</li>
+                            <li>块元素中几乎什么都能放</li>
+                            <li>p元素中不能放任何块元素</li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <pre>
+
+            &lt;!doctype html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;
+                    &lt;h1&gt;哈哈&lt;/h1&gt;
+                &lt;/p&gt;
+            
+                
+            &lt;/body&gt;
+            &lt;/html&gt;
+            
+            &lt;h1&gt;我就要写在html标签的外部！&lt;/h1&gt;
+        </pre>
+                <ul>
+                    <li>
+                        <p>标签布局（结构化语义标签）</p>
+                        <ul>
+                            <li>
+                                <mark>header</mark>
+                                表示网页头部</li>
+                            <li>
+                                <mark>main</mark>
+                                表示网页的主体部分（一个页面中只会有一个main）</li>
+                            <li>
+                                <mark>footer</mark>
+                                表示网页底部</li>
+                            <li>
+                                <mark>nav</mark>
+                                表示网页中的导航</li>
+                            <li>
+                                <mark>aside</mark>
+                                和主体相关的其他内容（侧边栏）</li>
+                            <li>
+                                <mark>article</mark>
+                                表示一个独立的文章</li>
+                            <li>
+                                <mark>section</mark>
+                                表示一个独立的区块，上边的标签不能表示时使用section</li>
+                            <li>
+                                <mark>div</mark>
+                                没有语义，就用来表示一个区块，目前来讲div还是我主要的布局元素</li>
+                            <li>
+                                <mark>span</mark>
+                                行内元素，没有任何意义，一般用于网页中选中文字</li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <pre>
+            
+            &lt;!doctype html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;header&gt;&lt;/header&gt;
+                &lt;main&gt;&lt;/main&gt;
+                &lt;footer&gt;&lt;/footer&gt;
+            
+                &lt;nav&gt;&lt;/nav&gt;
+                &lt;aside&gt;&lt;/aside&gt;
+                &lt;article&gt;&lt;/article&gt;
+            
+                &lt;section&gt;&lt;/section&gt;
+            
+                &lt;div&gt;&lt;/div&gt;
+            
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+            </div>
+        </body>
+    {% endblock content %}

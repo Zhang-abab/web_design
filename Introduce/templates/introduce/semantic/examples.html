@@ -1,0 +1,56 @@
+{% extends "introduce/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% block title %}Practice{% endblock %}
+{% block content %}
+<body>
+  <div class="card">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="/Introduce/semantic">理论讲解</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/Introduce/semantic/examples">效果展示</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/Introduce/semantic/practice">代码练习</a>
+          </li>
+        </ul>
+      </div>
+      <div class="web-body">
+        <h1>一级标题</h1>
+        <h2>二级标题</h2>
+        <h3>三级标题</h3>
+        <h4>四级标题</h4>
+        <h5>五级标题</h5>
+        <h6>六级标题</h6>
+        <hgroup>
+                <h1>回乡偶书二首</h1>
+                <h2>其一</h2>
+        </hgroup>
+        <p>在p标签中的内容就表示一个段落</p>
+        <p>在p标签中的内容就表示一个段落</p>
+        <p>今天天气<em>真</em>不错！</p>
+        <p>你今天必须要<strong>完成作业</strong>！</p>
+    
+        鲁迅说：
+        <blockquote>
+            这句话我是从来没有说过的！
+        </blockquote>
+        子曰<q>学而时习之，乐呵乐呵！</q>
+        <br>
+        <br>
+        今天天气真不错   
+      </div>
+      <div class="web-body">
+        <p>
+          <h1>哈哈</h1>
+      </p>
+      </div>
+      <br/>
+    </div>
+</body>  
+{% endblock content %}

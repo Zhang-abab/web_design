@@ -1,0 +1,61 @@
+{% extends "introduce/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% block title %}Entity{% endblock %}
+{% block content %}
+    <body>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Introduce/entity">理论讲解</a>
+                    </li>
+                    <li class="nav-item in_link">
+                        <a class="nav-link " href="/Introduce/entity/examples">效果展示</a>
+                    </li>
+                    <li class="nav-item in_link">
+                        <a class="nav-link" href="/Introduce/entity/practice">代码练习</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h3>2.实体</h3>
+                <p>在网页中编写的多个空格默认情况会自动被浏览器解析为一个空格</p>
+                <p>在HTML中有些时候，我们不能直接书写一些特殊符号</p>
+                <p>
+                    比如：多个连续的空格，比如字母两侧的大于和小于号</p>
+                <p>如果我们需要在网页中书写这些特殊的符号，则需要使用html中的实体（转义字符）</p>
+        <pre>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang=&quot;en&quot;&gt;
+          &lt;head&gt;
+              &lt;meta charset=&quot;UTF-8&quot;&gt;
+              &lt;title&gt;实体&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+  
+              &lt;!-- 
+                          &amp;nbsp; 空格
+                          &amp;gt; 大于号
+                          &amp;lt; 小于号
+                          &amp;copy; 版权符号
+              --&gt;
+          &lt;p&gt;
+              今天&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;天气真不错！
+          &lt;/p&gt;
+              
+          &lt;p&gt;
+  
+              a&amp;lt;b&amp;gt;c
+          &lt;/p&gt;
+  
+          &lt;/body&gt;
+          &lt;/html&gt;
+      </pre>
+      </div>
+        </div>
+
+    </body>
+{% endblock content %}

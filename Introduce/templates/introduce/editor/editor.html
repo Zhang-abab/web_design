@@ -1,0 +1,52 @@
+{% extends "introduce/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% block title %}Editor{% endblock %}
+{% block content %}
+<body>
+    <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="/Introduce/editor">理论讲解</a>
+            </li>
+            <li class="nav-item in_link">
+              <a class="nav-link " href="/Introduce/editor/examples">效果展示</a>
+            </li>
+            <li class="nav-item in_link">
+              <a class="nav-link" href="/Introduce/editor/practice">代码练习</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+            <h1>一、Introduce</h1>
+            <h3>1. 编辑器测试</h3>
+            <ol start=''>
+                <li class = "web_li">安装VSCode</li>
+                <li class = "web_li">安装中文语言包（Chinese）</li>
+                <li class = "web_li">尝试安装ayu主题</li>
+                <li class = "web_li">将一个目录作为项目目录</li>
+                <li class = "web_li">创建一个新网页</li>
+                <li class = "web_li">安装live server（实时渲染网页）</li>
+                <li class = "web_li">设置代码自动储存</li>
+            </ol>
+            <pre>
+                
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;zh&quot;&gt;
+                &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot;&gt;
+                    &lt;title&gt;Document&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+        
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+        </div>
+      </div>
+
+</body>  
+{% endblock content %}

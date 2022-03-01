@@ -1,15 +1,26 @@
+{% extends "introduce/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>list</title>
-        <link rel="stylesheet" href="{% static 'CSS/normalize.css' %}">
-        <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
-    </head>
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% block title %}List{% endblock %}
+{% block content %}
     <body>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Introduce/list">理论讲解</a>
+                    </li>
+                    <li class="nav-item in_link">
+                        <a class="nav-link " href="/Introduce/list/examples">效果展示</a>
+                    </li>
+                    <li class="nav-item in_link">
+                        <a class="nav-link" href="/Introduce/list/practice">代码练习</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
         <h3>5.列表</h3>
         <p>列表</p>
         <ol start=''>
@@ -20,7 +31,7 @@
         </ol>
         <p>在html中也可以创建列表，html列表一共有三种：</p>
         <pre>
-
+            
             1. 有序列表
             1. 无序列表
             1. 定义列表
@@ -106,3 +117,7 @@
         </pre>
     </body>
 </html>
+</div>
+
+</body>
+{% endblock content %}
